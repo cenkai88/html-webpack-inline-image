@@ -1,0 +1,51 @@
+{
+  "name": "html-webpack-inline-svg-plugin",
+  "version": "1.2.3",
+  "description": "Embed svg inline when using the html webpack plugin",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "svgo-config.js"
+  ],
+  "scripts": {
+    "prepublish": "npm run test",
+    "test": "jasmine",
+    "debug": "node-debug jasmine",
+    "build": "node spec/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thegc/html-webpack-inline-svg-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "html-webpack-plugin",
+    "inline",
+    "svg"
+  ],
+  "author": "Guy Campbell (https://github.com/thegc)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thegc/html-webpack-inline-svg-plugin/issues"
+  },
+  "homepage": "https://github.com/thegc/html-webpack-inline-svg-plugin",
+  "devDependencies": {
+    "file-loader": "^1.1.6",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.0.4",
+    "jasmine": "^2.9.0",
+    "mime-types": "^2.1.18",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.11.0"
+  },
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "cheerio": "^1.0.0-rc.2",
+    "lodash": "^4.17.4",
+    "parse5": "^4.0.0",
+    "svgo": "^1.0.3"
+  },
+  "_from": "html-webpack-inline-svg-plugin@1.2.3",
+  "_resolved": "http://registry.npm.taobao.org/html-webpack-inline-svg-plugin/download/html-webpack-inline-svg-plugin-1.2.3.tgz"
+}
