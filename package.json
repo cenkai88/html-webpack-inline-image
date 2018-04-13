@@ -1,6 +1,6 @@
 {
-  "name": "html-webpack-inline-svg-plugin",
-  "version": "1.2.3",
+  "name": "html-webpack-inline-image",
+  "version": "1.0.0",
   "description": "Embed svg inline when using the html webpack plugin",
   "main": "index.js",
   "files": [
@@ -8,9 +8,6 @@
     "svgo-config.js"
   ],
   "scripts": {
-    "prepublish": "npm run test",
-    "test": "jasmine",
-    "debug": "node-debug jasmine",
     "build": "node spec/build.js"
   },
   "repository": {

@@ -20,10 +20,11 @@ class HtmlWebpackInlineSVGPlugin {
             this.runPreEmit = true
         }
         this.basePath = options.basePath;
-        this.userConfig = ''
-        this.outputPath = ''
-        this.files = []
-        this.processedImages = []
+        this.userConfig = '';
+        this.outputPath = '';
+        this.files = [];
+        this.processedImages = [];
+        this.imageLimit = options.imageLimit || 5148;
     }
     /**
      * required to create a webpack plugin
@@ -310,7 +311,7 @@ class HtmlWebpackInlineSVGPlugin {
                         .catch((err) => console.log(chalk.red(err.message)))
                 })
             } else {
-                if (fs.statSync(path.resolve('src', imageSrc)).size >= 5120) {
+                if (fs.statSync(path.resolve('src', imageSrc)).size >= this.imageLimit) {
                     const fileName = imageSrc.split('/')[imageSrc.split('/').length - 1];
                     const readStream = fs.createReadStream(path.resolve('src', imageSrc));
                     if (!fs.existsSync(path.resolve('dist', this.userConfig.basePath))) this.mkdirsSync(path.resolve('dist', this.userConfig.basePath));
